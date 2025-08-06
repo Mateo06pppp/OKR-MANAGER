@@ -1,6 +1,7 @@
 import express from "express";
 import type { Request, Response } from "express";
 import dotenv from "dotenv";
+import {testConnection}  from "./config/config-db.js";
 
 dotenv.config();
 
@@ -15,4 +16,5 @@ app.get("/", (req: Request, res: Response) => {
 
 app.listen(PORT, () => {
   console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
+  testConnection(); // 👈 ejecuta la prueba de conexión
 });
