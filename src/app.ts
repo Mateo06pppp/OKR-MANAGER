@@ -7,6 +7,14 @@ import { testConnection } from "./config/config-db.js";
 import keyResultRoutes from "./routes/keyResultRoutes.js";
 import objetive from "./routes/objetiveRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
+import megaRouter from "./routes/megaRoutes.js";
+import strategicYearRouter from "./routes/strategicYearRoutes.js";
+import yearObjectiveRouter from "./routes/yearObjectiveRoutes.js";
+import yearBudgetRouter from "./routes/yearBudgetRoutes.js";
+import yearBudgetMonthRouter from "./routes/yearBudgetMonthRoutes.js";
+import areaRouter from "./routes/areaRoutes.js";
+import areaIndicatorRouter from "./routes/areaIndicatorRoutes.js";
+
 
 dotenv.config();
 
@@ -31,6 +39,14 @@ app.get("/", (_req: Request, res: Response) => {
 app.use("/keyResult", keyResultRoutes);
 app.use("/objetive", objetive);
 app.use("/users", userRoutes);
+app.use('/mega', megaRouter);
+app.use('/strategic-year', strategicYearRouter);
+app.use('/year-objective', yearObjectiveRouter);
+app.use('/year-budget', yearBudgetRouter);
+app.use('/year-budget-month', yearBudgetMonthRouter);
+app.use('/area', areaRouter);
+app.use('/area-indicator', areaIndicatorRouter);
+
 
 // Iniciar servidor
 app.listen(PORT, () => {
