@@ -10,6 +10,7 @@ const db = mysql.createPool({
   ssl: {
     rejectUnauthorized: true,
   },
+  connectTimeout: 40000 // 20 segundos
 });
 
 const promisePool = db.promise();
