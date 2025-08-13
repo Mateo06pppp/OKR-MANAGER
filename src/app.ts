@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 10101;
 
 // Middlewares
 app.use(cors({
-    origin: "http://localhost:3000 || http://localhost:3001", // Asegúrate que coincida con tu frontend
+    origin: ["http://localhost:3000", "http://localhost:3001"], // Asegúrate que coincida con tu frontend
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   }));
