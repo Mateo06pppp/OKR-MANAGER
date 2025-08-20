@@ -8,7 +8,7 @@ const db = mysql.createPool({
   database: process.env.DB_NAME ?? "proyecto_okr",
   port: Number(process.env.DB_PORT), 
   ssl: {
-    rejectUnauthorized: true,
+    rejectUnauthorized: false,
   },
   connectTimeout: 10000 // 10 segundos
 });
