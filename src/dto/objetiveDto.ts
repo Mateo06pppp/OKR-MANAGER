@@ -1,8 +1,9 @@
 export interface ObjectiveDto {
+  user_id: number;
   title: string;
   description?: string;
   startDate: string; // formato ISO
   endDate: string;   // formato ISO
   progress: number; // porcentaje de progreso
-  areaId: number; // ID del área asociada
+  sub_project_id: number;
 }

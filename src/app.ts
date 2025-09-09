@@ -14,6 +14,9 @@ import yearBudgetRouter from "./routes/yearBudgetRoutes.js";
 import yearBudgetMonthRouter from "./routes/yearBudgetMonthRoutes.js";
 import areaRouter from "./routes/areaRoutes.js";
 import areaIndicatorRouter from "./routes/areaIndicatorRoutes.js";
+import projectRoutes from "./routes/projectRoutes.js";
+import subProjectRoutes from "./routes/subProjectRoutes.js";
+import subAreaIndicatorRoutes from "./routes/subAreaIndicatorRoutes.js";
 
 
 dotenv.config();
@@ -46,6 +49,9 @@ app.use('/year-budget', yearBudgetRouter);
 app.use('/year-budget-month', yearBudgetMonthRouter);
 app.use('/area', areaRouter);
 app.use('/area-indicator', areaIndicatorRouter);
+app.use('/project', projectRoutes);
+app.use('/sub-project', subProjectRoutes);
+app.use('/sub-area-indicator', subAreaIndicatorRoutes);
 
 
 // Iniciar servidor

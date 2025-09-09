@@ -2,14 +2,11 @@ import mysql from 'mysql2';
 import 'dotenv/config';
 
 const db = mysql.createPool({
-  host: process.env.DB_HOST ?? "proyecto-okr.mysql.database.azure.com",
-  user: process.env.DB_USER ?? "mateo06",
-  password: process.env.DB_PASSWORD ?? "Mateo123",
+  host: process.env.DB_HOST ?? "localhost",
+  user: process.env.DB_USER ?? "root",
+  password: process.env.DB_PASSWORD ?? "mateo06pp",
   database: process.env.DB_NAME ?? "proyecto_okr",
   port: Number(process.env.DB_PORT), 
-  ssl: {
-    rejectUnauthorized: false,
-  },
   connectTimeout: 10000 // 10 segundos
 });
 
